@@ -17,10 +17,11 @@ public class ApiController {
     //두번째 방법 //http://localhost:9090/api/get/hi
     @RequestMapping(path = "/hi" , method = RequestMethod.GET)
     public String Hi(){
-        return "get Hi";
+        return "안녕";
     }
 
-/*
+
+    /*
     // Path Variable ver1
     // http://localhost:9090/api/get/path-variable/{name}
     @GetMapping("/path-variable/{name}")
@@ -29,14 +30,18 @@ public class ApiController {
         return name;
     }
 
- */
+     */
+
+
     // Path Variable ver2   @Getmapping의 pathvariable에 name을 적었는데 변수 이름은 다르게 설정해야할 때
     // http://localhost:9090/api/get/path-variable/{name}
-    @GetMapping("/path-variable/{name}")
-    public String pathVariable(@PathVariable(name = "name") String pathName){
+    @GetMapping("/path-variable/{a}")
+    public String pathVariable(@PathVariable(name = "a") String pathName){
         System.out.println("PathVariable : " + pathName);
         return pathName;
     }
+
+
 
     // map 으로 query-param 받기
     // http://localhost:9090/api/get/query-param?name=mk&age=26
