@@ -1,5 +1,5 @@
 package com.example.selfstudy.dto;
-public class UserRequest {
+public class GetUserRequest {
     private String name;
     private String email;
     private int age;

@@ -1,13 +1,13 @@
 package com.example.selfstudy.controller;
 
-import com.example.selfstudy.dto.UserRequest;
+import com.example.selfstudy.dto.GetUserRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
 @RestController //해당 클래스는 Rest API 처리하는 컨트롤러
 @RequestMapping("/api/get") // RequestMapping은 주소를 지정해주는 어노테이션 http://localhost:9090/api/get
-public class ApiController {
+public class GetApiController {
     // 첫번째 방법
     @GetMapping("/hello") //http://localhost:9090/api/get/hello
     public String hello(){
@@ -74,11 +74,11 @@ public class ApiController {
 
     //현업에서 가장 많이 쓰이는 dto 쓰는 방법
     @GetMapping("query-param03")
-    public String queryParam03(UserRequest userRequest){
-        System.out.println(userRequest.getName());
-        System.out.println(userRequest.getEmail());
-        System.out.println(userRequest.getAge());
+    public String queryParam03(GetUserRequest getUserRequest){
+        System.out.println(getUserRequest.getName());
+        System.out.println(getUserRequest.getEmail());
+        System.out.println(getUserRequest.getAge());
 
-        return userRequest.toString();
+        return getUserRequest.toString();
     }
 }
