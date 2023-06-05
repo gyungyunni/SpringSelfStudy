@@ -10,7 +10,7 @@ public class PostRequestDto {
 
     //@JsonProperty("phone_number")
     private String phoneNumber;
-    //JsonProperty("OTP")
+    //@JsonProperty("OTP")
     private String OTP;
 
     public String getPhoneNumber() {

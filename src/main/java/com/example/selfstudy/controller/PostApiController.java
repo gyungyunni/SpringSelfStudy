@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.sql.SQLOutput;
 import java.util.Map;
 
 @Slf4j
@@ -39,7 +38,7 @@ public class PostApiController {
     }
     @PostMapping("/post03")
     public void post(@RequestBody PostRequestDto2 requestData){
-        log.info("USER : {}", requestData);
+        log.info("{}", requestData);
 
     }
 }

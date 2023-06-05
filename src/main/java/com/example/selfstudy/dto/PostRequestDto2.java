@@ -16,5 +16,4 @@ public class PostRequestDto2 {
     @JsonProperty("OTP")
     private String OTP;
 
-
 }
