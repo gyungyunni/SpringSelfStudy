@@ -1,19 +1,18 @@
 package com.example.selfstudy.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategy;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import lombok.Data;
+import java.util.List;
 
+@JsonNaming(value = PropertyNamingStrategy.SnakeCaseStrategy.class)
 @Data
 public class PostRequestDto2 {
-    private String account;
-    private String email;
-    private String address;
-    private String password;
 
-    @JsonProperty("phone_number")
-    private String phoneNumber;
+    private String name;
+    private int age;
 
-    @JsonProperty("OTP")
-    private String OTP;
+    private List<CarDto> carList;
+
 
 }
